@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getStarWarsData } from "./starwarsAction";
 import StarWarsCard from './StarWarsCard'
 
+
 class StarWars extends Component {
   componentDidMount() {
     this.props.getStarWarsData();
@@ -12,7 +13,7 @@ class StarWars extends Component {
     return (
       <div className="starWarsMain">
         <h1>
-          all charechter of startwars counted and they are :
+          all charechter of startwars counted and they are: 
           {this.props.charechterCount}
         </h1>
         <StarWarsCard/>

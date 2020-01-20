@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "./store.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Weather from "./components/weatherComponent/Weather";
 import StarWars from "./components/starwarsComponent/StarWars";
 
 class App extends React.Component {
@@ -14,6 +15,7 @@ class App extends React.Component {
           <div>
             <Switch>
               <Route exact path="/" component={StarWars} />
+              <Route exact path="/weather" component={Weather} />
             </Switch>
           </div>
         </Router>
