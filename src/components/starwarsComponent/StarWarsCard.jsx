@@ -2,20 +2,21 @@ import React from "react";
 import { connect } from "react-redux";
 
 const StarWarsCard = props => {
-  if (!props.results) {
-    return <div>Loading....</div>;
-  }
+  // if (!props.results) {
+  //   return <div>Loading....</div>;
+  // }
   return (
     <div className="starWarsCard">
-      {props.results.map((e, i) => {
-        return (
-          <ul key={i} className="dataWrapper">
-            <li>name: {e.name}</li>
-            <li>hair color: {e.hair_color}</li>
-            <li>eye color: {e.eye_color}</li>
-          </ul>
-        );
-      })}
+      {props.results &&
+        props.results.map((e, i) => {
+          return (
+            <ul key={i} className="dataWrapper">
+              <li>name: {e.name}</li>
+              <li>hair color: {e.hair_color}</li>
+              <li>eye color: {e.eye_color}</li>
+            </ul>
+          );
+        })}
     </div>
   );
 };
